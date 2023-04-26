@@ -1,7 +1,5 @@
 package org.dinky.udf.scala
 
-import org.apache.flink.api.common.typeinfo.TypeInformation
-import org.apache.flink.api.java.typeutils.TupleTypeInfo
 import org.apache.flink.table.catalog.DataTypeFactory
 import org.apache.flink.table.functions.AggregateFunction
 import org.apache.flink.table.types.extraction.TypeInferenceExtractor

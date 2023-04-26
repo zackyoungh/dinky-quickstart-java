@@ -1,9 +1,9 @@
 package org.dinky.udf;
 
-import lombok.Data;
-
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.table.functions.TableAggregateFunction;
+
+import lombok.Data;
 
 /**
  * @author ZackYoung

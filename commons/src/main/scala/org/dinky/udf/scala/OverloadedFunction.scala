@@ -1,10 +1,9 @@
 package org.dinky.udf.scala
 
-import cn.hutool.core.convert.Convert
-import cn.hutool.core.io.BufferUtil
 import org.apache.flink.table.annotation.{DataTypeHint, InputGroup}
 import org.apache.flink.table.functions.ScalarFunction
 import org.apache.flink.types.Row
+import org.dinky.udf.Util.MyUtils
 
 class OverloadedFunction extends ScalarFunction {
 
@@ -28,7 +27,7 @@ class OverloadedFunction extends ScalarFunction {
   // 允许任意类型的符入，并输出定制序列化后的值
   @DataTypeHint(value = "RAW", bridgedTo = classOf[java.nio.ByteBuffer])
   def eval(@DataTypeHint(inputGroup = InputGroup.ANY) o: Any): java.nio.ByteBuffer = {
-    BufferUtil.create(Convert.toPrimitiveByteArray(o))
+    MyUtils.serializeToByteBuffer(o)
   }
 }
 

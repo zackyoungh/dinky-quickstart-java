@@ -1,8 +1,6 @@
 package org.dinky.udf;
 
-import cn.hutool.core.convert.Convert;
-import cn.hutool.core.io.BufferUtil;
-import cn.hutool.core.util.ByteUtil;
+import org.dinky.udf.Util.MyUtils;
 
 import org.apache.flink.table.annotation.DataTypeHint;
 import org.apache.flink.table.annotation.InputGroup;
@@ -38,7 +36,7 @@ public class OverloadedFunction extends ScalarFunction {
     // 允许任意类型的符入，并输出序列化定制后的值
     @DataTypeHint(value = "RAW", bridgedTo = ByteBuffer.class)
     public ByteBuffer eval(@DataTypeHint(inputGroup = InputGroup.ANY) Object o) {
-        return BufferUtil.create(Convert.toPrimitiveByteArray(o));
+        return MyUtils.serializeToByteBuffer(o);
     }
 }
 
