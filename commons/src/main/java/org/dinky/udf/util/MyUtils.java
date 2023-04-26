@@ -1,4 +1,4 @@
-package org.dinky.udf.Util;
+package org.dinky.udf.util;
 
 import java.nio.ByteBuffer;
 

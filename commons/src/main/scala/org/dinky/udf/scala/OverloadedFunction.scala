@@ -3,7 +3,7 @@ package org.dinky.udf.scala
 import org.apache.flink.table.annotation.{DataTypeHint, InputGroup}
 import org.apache.flink.table.functions.ScalarFunction
 import org.apache.flink.types.Row
-import org.dinky.udf.Util.MyUtils
+import org.dinky.udf.util.MyUtils
 
 class OverloadedFunction extends ScalarFunction {
 

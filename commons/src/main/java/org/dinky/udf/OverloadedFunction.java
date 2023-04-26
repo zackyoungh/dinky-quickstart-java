@@ -1,6 +1,6 @@
 package org.dinky.udf;
 
-import org.dinky.udf.Util.MyUtils;
+import org.dinky.udf.util.MyUtils;
 
 import org.apache.flink.table.annotation.DataTypeHint;
 import org.apache.flink.table.annotation.InputGroup;
