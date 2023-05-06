@@ -15,6 +15,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <jvm.compiler.target>1.8</jvm.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <flink.version>1.14.6</flink.version>
         <flink.binary.version>1.14</flink.binary.version>
@@ -75,7 +76,7 @@
                     <artifactId>scala-maven-plugin</artifactId>
                     <version>4.8.1</version>
                     <configuration>
-                        <addScalacArgs>-target:jvm-${maven.compiler.target}</addScalacArgs>
+                        <addScalacArgs>-target:jvm-${jvm.compiler.target}</addScalacArgs>
                         <target>${maven.compiler.target}</target>
                         <source>${maven.compiler.source}</source>
                     </configuration>
@@ -166,7 +167,7 @@
         </plugins>
 
 
-</build>
+    </build>
 
 
     <profiles>
