@@ -8,7 +8,7 @@ import org.apache.flink.table.functions.AggregateFunction;
 import java.util.*;
 
 /**
- * 表tpfm_internet_tourist_reviews，字段comment_analysis示例
+ * 字段comment_analysis示例
  * {"subjects": ["鸠兹", "古镇", "雪景", "芜湖"]}
  */
 public class CommentAnalysisAgg extends AggregateFunction<String, CommentAnalysisAccumulator> {
